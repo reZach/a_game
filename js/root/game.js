@@ -20,7 +20,7 @@ const Game = (function(){
     
         const addPennies = pennies => {
             penniesEarned += pennies;
-            
+
             writePennies(penniesEarned);
             updateDashboard();
         }
@@ -193,7 +193,7 @@ const Game = (function(){
 
     const bindPenniesWorker = function(){   
         try{
-            fetch("/js/root/penny.js")
+            fetch("./js/root/penny.js")
             .then(response => response.text())
             .then(text => {                
                 let blob = new Blob([text], { type: "text/javascript" });
